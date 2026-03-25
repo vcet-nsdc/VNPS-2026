@@ -97,11 +97,11 @@
             </a>
             <ul id="nav" class="nav navbar-nav navbar-right" style="display: flex; align-items: center;">
                 <li><a class="" href="#home">Home</a></li>
-                <li class="current"><a class="" href="#Tracks">Tracks</a></li>
-                <li><a class="w-100" target="_blank"
-                        href="https://docs.google.com/forms/d/e/1FAIpQLSeeg9QP1FNiCgNkba95Auv4p1amS3Xx0_poywsm2Y3q-QOeTw/viewform?usp=send_form">Registration</a>
-                </li>
+                <li><a class="" href="#Tracks">Tracks</a></li>
                 <li><a class="" href="#rules">Rules</a></li>
+                <li><a class="" href="#registration-section">Registration</a>
+                </li>
+                <li><a class="" href="#past-glimpse">Past Glimpse</a></li>
                 <li><a class="" href="#connect">Contact Us</a></li>
             </ul> <!-- end #nav -->
         </nav> <!-- end #nav-wrap -->
@@ -169,8 +169,8 @@
 		</div> <!-- end row -->
 
 		<div id="more" style="padding-bottom: 70px;">
-			<a href="#rules">Registration<i class="fa fa-angle-down"></i></a>
-		</div>
+		<a href="https://docs.google.com/forms/d/e/1FAIpQLSfpxDc7QXCI_FgoYNbx8_otfpcROUMAoH2QtwZoYdZ6t557zw/viewform" target="_blank">Registration<i class="fa fa-angle-right"></i></a>
+	</div>
 
 	</section> <!-- end homepage hero -->
 
@@ -530,39 +530,20 @@ The presentation must include an Abstract, Aim, Objective,
 
 				</div> <!-- end bgrid -->
 			</div>
-			<div class="service-list bgrid-half s-bgrid-whole tab-bgrid-whole group">
-				<!-- 
-				<div class="bgrid" justify="center">
-					<img src="images/icon/deadline.png" style="display:block; margin:0 auto" height="50px" width="50px">
-					<h3 style="text-align: center;"> SUBMISSION DEADLINE</h3>
-
-					<div class="service-content" style="text-align: center;">
-						<p>The project abstract of not more than 250 words is to be sent via the registration link by
-							<b style="color: #30839F;">5<sup>th</sup> April 2023</b>
-						</p>
-					</div>
-
-				</div> end bgrid -->
-
-				<div class="bgrid">
-					<img src="images/icon/confirmation.png" style="display:block; margin:0 auto" height="50px"
-						width="50px">
-					<h3 style="text-align: center;">REGISTRATION</h3>
-					<div class="service-content" style="text-align: center;">
-						<p>
-							<a href="https://docs.google.com/forms/d/e/1FAIpQLSfpxDc7QXCI_FgoYNbx8_otfpcROUMAoH2QtwZoYdZ6t557zw/viewform"
-								target="_blank" class="link">Registration
-								Form</a>
-							<br>
-						</p>
-						<img style="width: 150px;"  src="./images/QR_CODE_2026.jpeg" alt="qr_code">
-					</div>
-
-				</div> <!-- end bgrid -->
-
-
 			</div>
-			<div class="service-list bgrid-whole s-bgrid-whole tab-bgrid-whole group">
+			<!-- Registration QR Code Section -->
+			<section id="registration-section" style="text-align: center; padding: 4% 2%; background: #f9f9f9;">
+				<img src="images/icon/confirmation.png" style="display:block; margin:0 auto; margin-bottom: 1em;" height="60px" width="60px">
+				<h3 style="text-align: center; color: #30839F; font-size: 28px; margin-bottom: 1.5em;">REGISTRATION</h3>
+				<p style="margin-bottom: 1.5em;">
+					<a href="https://docs.google.com/forms/d/e/1FAIpQLSfpxDc7QXCI_FgoYNbx8_otfpcROUMAoH2QtwZoYdZ6t557zw/viewform" target="_blank" class="link" style="font-size: 18px; font-weight: bold;">Registration Form</a>
+				</p>
+				<p style="margin-bottom: 1em; color: #666;">Or scan the QR code:</p>
+				<img style="width: 180px; max-width: 100%;" src="./images/QR_CODE_2026.jpeg" alt="qr_code">
+			</section>
+			<!-- End Registration QR Code Section -->
+
+			<div class="service-list bgrid-whole s-bgrid-whole tab-bgrid-whole group" id="registration-guidelines">
 
 				<div class="bgrid">
 					<img src="images/icon/guidelines.png" style="display:block; margin:0 auto" height="50px"
@@ -709,52 +690,183 @@ The presentation must include an Abstract, Aim, Objective,
 	</section>
 	<!---end of prize section-->
 
+	<!--=================== past glimpse================================================== -->
+	<style>
+		.glimpse-card {
+			overflow: hidden;
+			border-radius: 15px;
+			box-shadow: 0 5px 20px rgba(0,0,0,0.3);
+			transition: all 0.4s ease;
+			position: relative;
+		}
+
+		.glimpse-card:hover {
+			transform: scale(1.05);
+			box-shadow: 0 0 30px rgba(66, 155, 245, 0.8), 0 5px 20px rgba(0,0,0,0.3);
+		}
+
+		.glimpse-card:hover img {
+			transform: scale(1.08);
+		}
+
+		.glimpse-card img {
+			width: 100%;
+			height: 300px;
+			object-fit: cover;
+			transition: transform 0.4s ease;
+		}
+	</style>
+	<section id="past-glimpse" style="padding: 5% 2%;">
+		<div class="row section-head">
+			<div class="twelve columns">
+				<div class="row text-center">
+					<h1 class="heading-title" style="font-size: 50px">Past Glimpse</h1>
+				</div>
+				<p style="text-align: center; margin-bottom: 3em;">Relive the moments from our previous VNPS & OSCILLATIONS 2025!</p>
+			</div>
+		</div>
+
+		<div style="max-width: 1200px; margin: 0 auto;">
+			<div class="row justify-content-center">
+				<div class="col-md-4 mt-4" style="padding: 10px;">
+					<div class="glimpse-card">
+								<img src="images/Past-glimpse/image_1.jpeg" alt="Past Event 1">
+					</div>
+				</div>
+				<div class="col-md-4 mt-4" style="padding: 10px;">
+					<div class="glimpse-card">
+								<img src="images/Past-glimpse/image_2.jpeg" alt="Past Event 2">
+					</div>
+				</div>
+				<div class="col-md-4 mt-4" style="padding: 10px;">
+					<div class="glimpse-card">
+								<img src="images/Past-glimpse/image_3.jpeg" alt="Past Event 3">
+					</div>
+				</div>
+				<div class="col-md-4 mt-4" style="padding: 10px;">
+					<div class="glimpse-card">
+								<img src="images/Past-glimpse/image_4.jpeg" alt="Past Event 4">
+					</div>
+				</div>
+				<div class="col-md-4 mt-4" style="padding: 10px;">
+					<div class="glimpse-card">
+								<img src="images/Past-glimpse/image_5.jpeg" alt="Past Event 5">
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+	<!---end of past glimpse section-->
 
 	<!--=================== contact================================================== -->
 	<section id="connect">
 		<div style="padding: 5%;">
 		</div>
 		<div class="row section-head">
-
-			<h1 class="heading-title text-center" style="font-size:28px">Get in touch with us</h1>
+			<div class="twelve columns">
+				<div class="row text-center">
+					<h1 class="heading-title" style="font-size: 50px">GET IN TOUCH WITH US</h1>
+				</div>
+			</div>
+		</div>
+		<div class="row section-head">
 			<h3 class="text-center">VIDYAVARDHINI'S COLLEGE OF ENGINEERING AND TECHNOLOGY</h3>
 		<h4 class="text-center">(Approved by AICTE, Autonomous Institute Affiliated to University of Mumbai) <br>
 				NBA & NAAC Accredited</h4>
 		</div>
 		<div class="row">
+			<!-- Left Column: Map + Come Visit -->
 			<div class="six columns tab-whole left">
+				<!-- Google Map -->
 				<div class="google-maps">
 					<iframe
 						src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3763.659991305768!2d72.82654491443476!3d19.383869586912066!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7aec0a4b41bef%3A0xbd1a4ca919d6a613!2sVidyavardhini's+College+of+Engineering+and+Technology!5e0!3m2!1sen!2sin!4v1521540877490"
 						width="300" height="300" frameborder="0" style="border:6px outset silver"
 						allowfullscreen></iframe>
 				</div>
+
+				<!-- Come Visit Section -->
+				<div style="margin-top: 2em;">
+					<h3>Come Visit</h3>
+					<p>
+						Vidyavardhini's College of Engineering & Technology<br>
+						Vartak College Campus<br>
+						K.T. Marg, Vasai (W), Palghar – 401202<br>
+						Tel: 0250-2338234
+					</p>
+
+					<h3>Website:</h3>
+					<p><a class="link" href="http://www.vcet.edu.in/" target="_blank">vcet.edu.in</a></br>
+					</p>
+					<div class="social-media-links" style="font-size: 2.6rem; color: #3b73c7;">
+						<a href="https://www.facebook.com/profile.php?id=100080250005730" target="_blank"><i
+								class="fa fa-facebook-square"></i></a>
+						<a href="https://www.instagram.com/vnps_2023/" target="_blank"><i class="fa fa-instagram"></i></a>
+					</div>
+				</div>
 			</div>
 
-
+			<!-- Right Column: Track Contacts -->
 			<div class="six columns tab-whole right">
-				<h3>Come Visit</h3>
-
-
-				<p>
-					Vidyavardhini's College of Engineering & Technology<br>
-					Vartak College Campus<br>
-					K.T. Marg, Vasai (W), Palghar – 401202<br>
-					Tel: 0250-2338234
-				</p>
-
-				<h3>Website:</h3>
-				<p><a class="link" href="http://www.vcet.edu.in/" target="_blank">vcet.edu.in</a></br>
-				</p>
-				<div class="social-media-links" style="font-size: 2.6rem; color: #3b73c7;">
-					<a href="https://www.facebook.com/profile.php?id=100080250005730" target="_blank"><i
-							class="fa fa-facebook-square"></i></a>
-					<a href="https://www.instagram.com/vnps_2023/" target="_blank"><i class="fa fa-instagram"></i></a>
+				<div style="padding: 2em; background: #f9f9f9; border-radius: 10px; border-left: 5px solid #30839F;">
+					<h3 style="color: #30839F; margin-top: 0; margin-bottom: 1.5em; font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;">TRACK CONTACTS</h3>
+					<div style="display: grid; grid-template-columns: 1fr; gap: 1em;">
+						<div style="padding: 1em; background: white; border-radius: 5px; border-left: 4px solid #30839F;">
+							<h5 style="color: #30839F; margin: 0 0 0.5em 0; font-size: 14px; font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;">Track 1</h5>
+							<p style="margin: 0; color: #333; font-size: 13px; font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;">
+								<a href="tel:+91-8010642758" style="text-decoration: none; color: #30839F; font-weight: 600;">Vijaykumar Yadav</a><br>
+								<span style="color: #555; font-weight: 700; font-size: 14px; letter-spacing: 0.5px;">+91 8010642758</span>
+							</p>
+						</div>
+						<div style="padding: 1em; background: white; border-radius: 5px; border-left: 4px solid #30839F;">
+							<h5 style="color: #30839F; margin: 0 0 0.5em 0; font-size: 14px; font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;">Track 2</h5>
+							<p style="margin: 0; color: #333; font-size: 13px; font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;">
+								<a href="tel:+91-8484885852" style="text-decoration: none; color: #30839F; font-weight: 600;">Akshat Choudhari</a><br>
+								<span style="color: #555; font-weight: 700; font-size: 14px; letter-spacing: 0.5px;">+91 8484885852</span>
+							</p>
+						</div>
+						<div style="padding: 1em; background: white; border-radius: 5px; border-left: 4px solid #30839F;">
+							<h5 style="color: #30839F; margin: 0 0 0.5em 0; font-size: 14px; font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;">Track 3</h5>
+							<p style="margin: 0; color: #333; font-size: 13px; font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;">
+								<a href="tel:+91-9619508298" style="text-decoration: none; color: #30839F; font-weight: 600;">Shreya Wankhede</a><br>
+								<span style="color: #555; font-weight: 700; font-size: 14px; letter-spacing: 0.5px;">+91 9619508298</span>
+							</p>
+						</div>
+						<div style="padding: 1em; background: white; border-radius: 5px; border-left: 4px solid #30839F;">
+							<h5 style="color: #30839F; margin: 0 0 0.5em 0; font-size: 14px; font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;">Track 4</h5>
+							<p style="margin: 0; color: #333; font-size: 13px; font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;">
+								<a href="tel:+91-9167048421" style="text-decoration: none; color: #30839F; font-weight: 600;">Aditya Kadam</a><br>
+								<span style="color: #555; font-weight: 700; font-size: 14px; letter-spacing: 0.5px;">+91 9167048421</span>
+							</p>
+						</div>
+						<div style="padding: 1em; background: white; border-radius: 5px; border-left: 4px solid #30839F;">
+							<h5 style="color: #30839F; margin: 0 0 0.5em 0; font-size: 14px; font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;">Track 5</h5>
+							<p style="margin: 0; color: #333; font-size: 13px; font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;">
+								<a href="tel:+91-8421114854" style="text-decoration: none; color: #30839F; font-weight: 600;">Vikrant Athawale</a><br>
+								<span style="color: #555; font-weight: 700; font-size: 14px; letter-spacing: 0.5px;">+91 8421114854</span>
+							</p>
+						</div>
+						<div style="padding: 1em; background: white; border-radius: 5px; border-left: 4px solid #30839F;">
+							<h5 style="color: #30839F; margin: 0 0 0.5em 0; font-size: 14px; font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;">Track 6</h5>
+							<p style="margin: 0; color: #333; font-size: 13px; font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;">
+								<a href="tel:+91-7276379554" style="text-decoration: none; color: #30839F; font-weight: 600;">Sahebdeep Singh</a><br>
+								<span style="color: #555; font-weight: 700; font-size: 14px; letter-spacing: 0.5px;">+91 7276379554</span>
+							</p>
+						</div>
+						<div style="padding: 1em; background: white; border-radius: 5px; border-left: 4px solid #30839F;">
+							<h5 style="color: #30839F; margin: 0 0 0.5em 0; font-size: 14px; font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;">Track 7 (Oscillations Only)</h5>
+							<p style="margin: 0; color: #333; font-size: 13px; font-family: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;">
+								<a href="tel:+91-7387423703" style="text-decoration: none; color: #30839F; font-weight: 600;">Trisha Jha</a><br>
+								<span style="color: #555; font-weight: 700; font-size: 14px; letter-spacing: 0.5px;">+91 7387423703</span>
+							</p>
+						</div>
+					</div>
 				</div>
-				</br>
 			</div>
 
 		</div> <!-- end row -->
+
+		<!-- Track Contacts Section (removed - now integrated above) -->
 
 	</section> <!-- end contact -->
 
