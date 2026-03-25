@@ -139,30 +139,63 @@ $(function () {
   });
 
   /*----------------------------------------------------*/
-  /* Highlight the current section in the navigation bar
+  /* Highlight the current section in the navigation bar - Smooth Real-time Scroll Detection
   	------------------------------------------------------*/
   var sections = $("section"),
     navigation_links = $("#nav-wrap a");
 
-  sections.waypoint({
-    handler: function (direction) {
-      var active_section;
+  // Real-time scroll detection for smooth navbar updates
+  $(window).on("scroll", function () {
+    var scrollPos = $(window).scrollTop() + 100; // Reference point from top of viewport
 
-      if (!this.element.id) return; // Skip if no ID
-      active_section = $("section#" + this.element.id);
+    navigation_links.parent().removeClass("current");
 
-      if (direction === "up") active_section = active_section.prev();
+    var closest_section = null;
+    var closest_distance = Infinity;
 
-      var active_link = $(
-        '#nav-wrap a[href="#' + active_section.attr("id") + '"]',
-      );
+    sections.each(function () {
+      var section = $(this);
+      var sectionId = section.attr("id");
 
-      navigation_links.parent().removeClass("current");
+      if (!sectionId) return; // Skip if no ID
+
+      var sectionTop = section.offset().top;
+
+      // Find the section whose top is closest to (or just below) our reference point
+      if (sectionTop <= scrollPos) {
+        var distance = scrollPos - sectionTop;
+        if (distance < closest_distance) {
+          closest_distance = distance;
+          closest_section = section;
+        }
+      }
+    });
+
+    // If no section found above scroll pos, find the very next one
+    if (!closest_section && sections.length > 0) {
+      sections.each(function () {
+        var section = $(this);
+        var sectionId = section.attr("id");
+
+        if (!sectionId) return;
+
+        var sectionTop = section.offset().top;
+        if (!closest_section || sectionTop < closest_section.offset().top) {
+          closest_section = section;
+        }
+      });
+    }
+
+    // Highlight the correct section
+    if (closest_section) {
+      var sectionId = closest_section.attr("id");
+      var active_link = $('#nav-wrap a[href="#' + sectionId + '"]');
       active_link.parent().addClass("current");
-    },
-
-    offset: "25%",
+    }
   });
+
+  // Trigger scroll event on page load
+  $(window).trigger("scroll");
 
   /*----------------------------------------------------*/
   /* FitText Settings
